@@ -34,7 +34,7 @@
     "ts-transform-inferno": "^4.0.2",
     "tsconfig-paths": "^3.7.0",
     "typescript": "^3.1.6",
-    "yarn": "^1.16.0"
+    "yarn": "^1.17.3"
   },
   "scripts": {
     "start": "NODE_ENV=development node fuse.js",
