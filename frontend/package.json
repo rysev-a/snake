@@ -1,0 +1,50 @@
+{
+  "name": "snake",
+  "version": "0.0.1",
+  "description": "Snake game",
+  "main": "fusebox.js",
+  "dependencies": {
+    "@types/moment": "^2.13.0",
+    "axios": "^0.18.0",
+    "bulma": "^0.7.2",
+    "classnames": "^2.2.6",
+    "inferno": "^7.1.9",
+    "inferno-mobx": "^7.1.11",
+    "inferno-router": "^7.1.11",
+    "mobx": "^5.9.4",
+    "moment": "^2.24.0",
+    "normalize.css": "^8.0.1",
+    "ramda": "^0.26.1",
+    "typestyle": "^2.0.2"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "@types/chai": "^4.1.7",
+    "@types/history": "^4.7.2",
+    "@types/mocha": "^5.2.5",
+    "@types/ramda": "^0.26.6",
+    "add": "^2.0.6",
+    "chai": "^4.2.0",
+    "cypress": "^3.1.5",
+    "fuse-box": "^3.6.0",
+    "http-proxy-middleware": "^0.19.1",
+    "mocha": "^5.2.0",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.2",
+    "ts-transform-inferno": "^4.0.2",
+    "tsconfig-paths": "^3.7.0",
+    "typescript": "^3.1.6",
+    "yarn": "^1.16.0"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development node fuse.js",
+    "build": "NODE_ENV=production node fuse.js",
+    "test": "export TS_NODE_PROJECT='./src/tsconfig.json'; mocha -r ts-node/register -r tsconfig-paths/register src/**/*.test.ts"
+  },
+  "keywords": [
+    "game",
+    "pdffiller-startup-club"
+  ],
+  "author": "Rysev Alexey",
+  "license": "ISC"
+}
