@@ -12,7 +12,6 @@ export interface GameState {
 
 export interface GameConfig {
   areaSize: number;
-  snakeLength: number;
   scale: number;
   speed: number;
 }

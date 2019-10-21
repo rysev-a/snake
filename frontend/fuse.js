@@ -19,7 +19,7 @@ const fuse = FuseBox.init({
   target: 'browser@es6',
   output: 'build/$name.js',
   plugins: [
-    WebIndexPlugin({ template: 'src/assets/index.html', path: '/snake' }),
+    WebIndexPlugin({ template: 'src/assets/index.html', path: '/' }),
     [
       CSSResourcePlugin({
         dist: './build/css-resources',

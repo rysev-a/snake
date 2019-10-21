@@ -1,9 +1,8 @@
 import { GameConfig, GameState } from './Engine';
 
 export const gameConfig: GameConfig = {
-  areaSize: 10,
-  snakeLength: 3,
-  scale: 20,
+  areaSize: 100,
+  scale: 10,
   speed: 100,
 };
 
