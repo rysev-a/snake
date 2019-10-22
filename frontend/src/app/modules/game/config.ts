@@ -1,8 +1,8 @@
 import { GameConfig, GameState } from './Engine';
 
 export const gameConfig: GameConfig = {
-  areaSize: 100,
-  scale: 10,
+  areaSize: 10,
+  scale: 20,
   speed: 100,
 };
 
