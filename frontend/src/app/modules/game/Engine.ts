@@ -1,5 +1,9 @@
 type moveDirectionType = 'top' | 'bottom' | 'right' | 'left';
 
+export interface Apple {
+  x: number;
+  y: number;
+}
 export interface GameState {
   snakePosition: {
     x: number;
@@ -8,6 +12,7 @@ export interface GameState {
 
   snakeTail: any[];
   moveDirection: moveDirectionType;
+  apples: Apple[];
 }
 
 export interface GameConfig {
@@ -82,6 +87,20 @@ class Engine {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.renderSnakeHead();
     this.renderSnakeTail();
+    this.renderApples();
+  }
+
+  renderApples() {
+    this.gameState.apples.map((apple: Apple) => {
+      this.context.beginPath();
+      this.context.rect(
+        apple.x * this.gameConfig.scale,
+        (this.gameConfig.areaSize - apple.y - 1) * this.gameConfig.scale,
+        this.gameConfig.scale,
+        this.gameConfig.scale
+      );
+      this.context.stroke();
+    });
   }
 
   renderSnakeHead() {

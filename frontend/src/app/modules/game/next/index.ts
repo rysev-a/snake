@@ -2,6 +2,8 @@ import { GameState, GameConfig } from '../Engine';
 import getNextMoveDirection from './snake/direction';
 import moveSnakeBlock from './snake/move-block';
 import getSnakeTail from './snake/tail';
+import eatApples from './apple';
+import { gameConfig } from '../config';
 
 const next = (state: GameState, config: GameConfig, keyPressed) => {
   const prevMoveDirection = state.moveDirection;
@@ -13,13 +15,19 @@ const next = (state: GameState, config: GameConfig, keyPressed) => {
     size: config.areaSize,
   });
 
-  const snakeTail = getSnakeTail(state, config, prevMoveDirection);
+  const movedSnakeTail = getSnakeTail(state, config, prevMoveDirection);
+
+  const { apples, snakeTail } = eatApples(
+    { ...state, snakeTail: movedSnakeTail },
+    gameConfig
+  );
 
   return {
     ...state,
     moveDirection: nextMoveDirection,
     snakePosition,
     snakeTail,
+    apples,
   };
 };
 

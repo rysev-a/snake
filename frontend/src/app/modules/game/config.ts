@@ -18,4 +18,5 @@ export const gameInitialState: GameState = {
     { x: 5, y: 9, moveDirection: 'left' },
     { x: 6, y: 9, moveDirection: 'left' },
   ],
+  apples: [{ x: 0, y: 0 }],
 };
