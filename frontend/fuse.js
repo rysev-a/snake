@@ -9,6 +9,7 @@ const {
 
 const TsTransformInferno = require('ts-transform-inferno').default;
 const isProduction = process.env.NODE_ENV === 'production';
+const path = isProduction ? '/snake' : '/';
 
 const fuse = FuseBox.init({
   useTypescriptCompiler: true,
@@ -19,7 +20,7 @@ const fuse = FuseBox.init({
   target: 'browser@es6',
   output: 'build/$name.js',
   plugins: [
-    WebIndexPlugin({ template: 'src/assets/index.html', path: '/' }),
+    WebIndexPlugin({ template: 'src/assets/index.html', path }),
     [
       CSSResourcePlugin({
         dist: './build/css-resources',
