@@ -5,7 +5,7 @@
   "main": "fusebox.js",
   "dependencies": {
     "@types/moment": "^2.13.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bulma": "^0.7.2",
     "classnames": "^2.2.6",
     "inferno": "^7.1.9",
